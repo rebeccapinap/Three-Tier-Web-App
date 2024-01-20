@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- authenticate.html -->
+<html lang="en">
+<head>
+   <title>Authentication Page</title>
+   <meta charset="utf-8" />
+   <style type="text/css">
+	    body{background-color: black; text-align: center; font-family: Verdana, Arial, sans-serif;}
+		
+        h1{color: yellow; font-size: 28pt;}
+        h2{color: limegreen; font-size: 24pt;}
+        h3{color: red; font-size: 24pt;}
+        label{color: yellow;}
+        button{background-color: grey;color:limegreen;font-weight:bold;}
+        hr{color: white;}
+	</style>
+</head>
+<body>
+    <h1>Welcome to the Fall 2023 Project 4 Enterprise System</h1>
+    <h2>A Servlet/JSP-Based Multi-Tiered Enterprise Application Using A Tomcat Container</h2>
+    <h3>- User Authentication Page -</h3>
+    <hr>
+    <br>
+   <form action = "/Project-4/authenticate" method = "post">
+      <p><label for = "username">UserName</label>
+         <input type = "text" name = "username" />
+         <br>
+         <br>
+         <label for = "password">Password</label>
+         <input type = "password" name = "password" /><label> 
+         <br>
+         <br>
+         <button type = "submit">Click To Authenticate</button>
+      </p>
+   </form>
+    <br>
+    <hr>
+</body>
+</html>

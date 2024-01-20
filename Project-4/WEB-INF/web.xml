@@ -1,0 +1,108 @@
+<web-app>
+
+   <!-- General description of your Web application -->
+   <display-name>
+      CNT 4714 Fall 2023 Project 4 Servlet/JSP Home Page 
+   </display-name>
+
+   <description>
+      This is the Web application for Project 4 in which we 
+      demonstrate our three-tier distributed Web-based application.
+   </description>
+
+   <!-- Servlet definitions and mappings  -->
+
+      <servlet>
+         <servlet-name>authenticationServlet</servlet-name>
+         <description> A servlet that handles authentication. </description>
+         <servlet-class> AuthenticationServlet  </servlet-class>
+      </servlet>
+
+               <servlet-mapping>
+                  <servlet-name>authenticationServlet</servlet-name>
+                  <url-pattern>/authenticate</url-pattern>
+               </servlet-mapping>
+
+
+      <servlet>
+         <servlet-name>rootUserServlet</servlet-name>
+         <description> A servlet that allows the root user to execute sql commands with all root-level priveleges. </description>
+         <servlet-class> RootUserServlet </servlet-class>
+      </servlet>
+
+                  <servlet-mapping>
+                     <servlet-name>rootUserServlet</servlet-name>
+                     <url-pattern>/rootHome</url-pattern>
+                  </servlet-mapping>
+
+
+        <servlet>
+            <servlet-name>clientUserServlet</servlet-name>
+            <description> A servlet that allows the client user to execute sql commands with only select privelege. </description>
+            <servlet-class> ClientUserServlet </servlet-class>
+        </servlet>
+
+                  <servlet-mapping>
+                        <servlet-name>clientUserServlet</servlet-name>
+                        <url-pattern>/clientHome</url-pattern>
+                     </servlet-mapping>
+
+   
+       <servlet>
+         <servlet-name>addSupplierServlet</servlet-name>
+         <description> A redirection/re-routing servlet </description>
+         <servlet-class> AddSupplierServlet  </servlet-class>
+       </servlet>
+
+                  <servlet-mapping>
+                     <servlet-name>addSupplierServlet</servlet-name>
+                     <url-pattern>/addSupplier</url-pattern>
+                  </servlet-mapping>
+
+
+      <servlet>
+         <servlet-name>addPartServlet</servlet-name>
+         <description> A simple servlet that handles an HTTP get request. </description>
+         <servlet-class> AddPartServlet </servlet-class>
+      </servlet>
+
+               <servlet-mapping>
+                  <servlet-name>addPartServlet</servlet-name>
+                  <url-pattern>/addPart</url-pattern>
+               </servlet-mapping>
+    
+      <servlet>
+         <servlet-name>addJobServlet</servlet-name>
+         <description> A simple servlet that handles an HTTP get request. </description>
+         <servlet-class> AddJobServlet </servlet-class>
+      </servlet>
+
+               <servlet-mapping>
+                  <servlet-name>addJobServlet</servlet-name>
+                  <url-pattern>/addJob</url-pattern>
+               </servlet-mapping>
+    
+      <servlet>
+         <servlet-name>addShipmentServlet</servlet-name>
+         <description> A simple servlet that handles an HTTP get request. </description>
+         <servlet-class> AddShipmentServlet </servlet-class>
+      </servlet>
+
+               <servlet-mapping>
+                  <servlet-name>addShipmentServlet</servlet-name>
+                  <url-pattern>/addShipment</url-pattern>
+               </servlet-mapping>
+
+      <servlet>
+          <servlet-name>accountantUserServlet</servlet-name>
+          <description> A servlet that allows the client user to execute sql commands with only select privelege. </description>
+          <servlet-class> AccountantUserServlet </servlet-class>
+      </servlet>
+
+              <servlet-mapping>
+                      <servlet-name>accountantUserServlet</servlet-name>
+                      <url-pattern>/acountantHome</url-pattern>
+              </servlet-mapping>
+
+</web-app>
+
